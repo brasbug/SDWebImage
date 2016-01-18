@@ -19,7 +19,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.framework = 'ImageIO'
   
-  s.default_subspec = 'Core','WebP'
+  s.dependency 'JKChartView'  , :git =>'https://github.com/brasbug/JKChartView.git'
+  
+  s.default_subspec = 'Core'
   
   s.subspec 'Core' do |core|
     core.source_files = 'SDWebImage/{NS,SD,UI}*.{h,m}'
